@@ -515,6 +515,7 @@ function undo() {
 }
 
 function reset() {
+    create_undo_point();
     game.start_transition(zb.transition.FADE, 300, function() {
         load_level();
     });
@@ -522,6 +523,8 @@ function reset() {
 
 function advance_level() {
     if (!can_continue) return;
+
+    undo_stack = [];
 
     console.log("W:", Math.max(...Object.keys(levels).map(a => parseInt(a, 10) || 0)));
 
