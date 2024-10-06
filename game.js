@@ -104,7 +104,7 @@ zb.ready(function() {
             volume: 0.95,
         },
         hop: {
-            path: 'sfx/win.wav',
+            path: 'sfx/hop.wav',
             volume: 0.95,
         },
     });
